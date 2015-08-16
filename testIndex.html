@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>First jQuery Mobile</title>
+    <!-- name:charith nipuna kalansooriya-->
+<!-- ID No:213208713-->
+    <!-- the three things that jQuery Mobile needs to work -->
+    <link rel="stylesheet" href="jquery.mobile-1.4.2/jquery.mobile-1.4.2.css" />
+    <script src="jquery-1.11.0.js" type="text/javascript"></script>
+    <script src="jquery.mobile-1.4.2/jquery.mobile-1.4.2.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width"/>
+    <style type="text/css">
+	body {
+    background: url(Background.jpg);
+    background-repeat:repeat-y;
+    background-position:center center;
+    background-attachment:scroll;
+    background-size:100% 100%;
+
+	}
+
+	.ui-page {
+   		 background: transparent;
+	}
+	.ui-content{
+    	background: transparent;
+	}
+	
+	.h1{
+		color:#FF008E;
+		
+	}
+	.popup-image
+	{
+	width:500px;
+	}
+	
+	.menu-image
+	{
+	width:500px;
+	height:450px;
+	 border-radius: 5% !important;
+	border: 5px solid #000 !important; <!--!important is added to overide other styles applided --->
+	 
+	}
+	
+	.photos {
+  display: block;
+  min-height=50px;
+}
+
+.photos ul { list-style: none; }
+
+.photos ul li { display: inline; }
+
+.photos ul li a {
+  display: block;
+  float: left;
+  padding: 4px;
+  margin-right: 10px;
+  margin-bottom: 7px;
+  opacity: 0.80; 
+}
+.photos ul li a:hover {
+  opacity: 2.0;
+}
+
+.photos ul li a img {
+  border: 6px solid #e1d9ec;
+    width: 200px;
+	height:180px;
+	    border-radius: 2%;
+}
+	.Banner
+	{
+	background:url(supreme.jpg);
+	margin-bottom:5%;
+	}
+	
+	.header_font
+	{
+	font-size:40px;
+	}
+	
+	p,h3,h4
+	{	
+	color:#fff;
+	}
+	
+	.paddingLeft10
+	{
+	    padding-left: 10%;
+	}
+	
+	.menuItem
+	{
+	    width: 50%;
+    padding-left: 10%;
+    padding-bottom: 1%;
+	}
+	
+	.form-class
+	{
+	    width: 60%;
+    text-align: center;
+	}
+	.footer
+	{
+	 
+    border: #000; 
+color: #fff !important; 	
+    background: -webkit-linear-gradient(#A0522D, #000);
+	}
+	
+	.padding5
+	{
+	padding-left:5%;
+
+	}
+	
+	.btn
+	{
+	    margin-left: 80%;
+	}
+	
+	.alignPara
+	{
+	    text-align: center;
+	}
+	</style>
+	
+	
+</head>
+<body>
+    <!-- This is the first page -->
+    <section id="firstpage" data-role="page">
+         <div data-role="header">
+            <h1>HOME</h1>
+        </div>
+        <div class="ui-content Banner" role="main">
+            <p class="header_font">Bellas Pizza</p >          
+              <!-- Menu Items -->
+            <div data-role="controlgroup" data-type="Vertical">                
+               <a href="#page1" class="ui-btn">Menu</a>
+               <a href="#page2" class="ui-btn">Feedback</a>
+               <a href="#page3" class="ui-btn">Gallery</a>
+               <a href="#page4" class="ui-btn">About</a>
+               <a href="#page5" class="ui-btn">Contact</a>
+               <a href="#page6" class="ui-btn">Developer</a>
+              <a href="#page7" class="ui-btn">Booking</a>
+                 
+              <a href="Map.html" rel="external" class="ui-btn">location </a>
+            </div>
+			 
+        </div>
+       
+    </section>
+
+<!-- This is the page1 page -->
+    <div id="page1" data-role="page">
+        <div data-role="header">
+            <h1>MENU</h1>
+        </div>
+        <div class="ui-content Banner" role="main">
+		 <p class="header_font">Bellas Pizza</p >          
+            
+            <div data-role="controlgroup" data-type="horizontal">
+			     <!-- Menu Items -->
+                 <a href="#firstpage" class="ui-btn">Home</a>
+               <a href="#page1" class="ui-btn">Menu</a>
+               <a href="#page2" class="ui-btn">Feedback</a>
+               <a href="#page3" class="ui-btn">Gallery</a>
+               <a href="#page4" class="ui-btn">About</a>
+               <a href="#page5" class="ui-btn">Contact</a>
+               <a href="#page6" class="ui-btn">Developer</a>
+                <a href="#page7" class="ui-btn">Booking</a>
+                 
+              <a href="Map.html" rel="external" class="ui-btn">location</a>
+            </div>
+               </div>
+			    <!-- display as a list -->
+        <ul data-role="listview" data-divider-theme="b" class="menuItem">
+		 <!-- List item -->
+            <li data-role="list-divider">Pizzas</li>
+                <li> 
+				<!-- anchor tag used to link pages -->
+                    <a href="#Pizzas">Pizza</a>
+                </li>
+                </ul>
+                
+        <ul data-role="listview" data-divider-theme="b" class="menuItem">
+            <li data-role="list-divider">Side Dishes</li>
+                <li>
+                    <a href="#Sides">Bread & Others</a>
+                </li>
+                </ul>
+                
+        <ul data-role="listview" data-divider-theme="b" class="menuItem">
+            <li data-role="list-divider">Dessert</li>
+                <li>
+                    <a href="#Dessert">Cakes</a>
+                </li>
+                </ul>        
+                
+                
+                <ul data-role="listview" data-divider-theme="b" class="menuItem">
+            <li data-role="list-divider">Drinks</li>
+                <li>
+                    <a href="#Drinks">Soft Drinks</a>
+                </li>
+                </ul> 
+                
+                
+                
+                
+        </div>  
+	<!-- pizza menu -->
+     <section id="Pizzas" data-role="page">
+        <header data-role="header"><a href="#page1" class="ui-btn-left"> Back</a>
+            <h1>Pizzas</h1>
+        </header>
+        <div class="ui-content">
+                <div class="ui-grid-a paddingLeft10">
+                <a href="#hamcheese-pizza"><img class="menu-image" src="hamcheese-pizza.jpg" /></a>
+				<a href="#italiano"><img class="menu-image" src="italiano.jpg" /></a>
+				<a href="#periperi-chiken"><img  class="menu-image" src="periperi-chiken.jpg" /></a>
+				<a href="#supreme"><img class="menu-image" src="supreme.jpg"/></a>
+        </div>
+        </div>
+    </section>
+	
+     <!-- drinks menu -->
+     <section id="Drinks" data-role="page">
+        <header data-role="header"><a href="#page1" class="ui-btn-left"> Back</a>
+            <h1>Drinks</h1>
+        </header>
+        <div class="ui-content">
+                <div class="ui-grid-a paddingLeft10">
+                <a href="#cocacola"><img class="menu-image" src="cocacola.jpg" /></a>
+				<a href="#Fanta"><img class="menu-image" src="Fanta.jpg" /></a>
+				<a href="#mountfranklin"><img class="menu-image" src="mountfranklin.jpg" /></a>
+        </div>
+        </div>
+    </section>
+    
+  <!-- sides menu -->
+     <section id="Sides" data-role="page">
+        <header data-role="header"><a href="#page1" class="ui-btn-left"> Back</a>
+            <h1>Side Dishes</h1>
+        </header>
+        <div class="ui-content">
+                <div class="ui-grid-a paddingLeft10">
+                <a href="#chips"><img class="menu-image" src="chips.jpg" /></a>
+				<a href="#Garlicbread"><img class="menu-image" src="Garlicbread.jpg" /></a>
+				<a href="#spicy-chicken-bites"><img class="menu-image" src="spicy-chicken-bites.jpg" /></a>
+        </div>
+        </div>
+    </section>
+	
+	<!-- dessert menu -->
+     <section id="Dessert" data-role="page">
+        <header data-role="header"><a href="#page1" class="ui-btn-left"> Back</a>
+            <h1>Desserts</h1>
+        </header>
+        <div class="ui-content">
+                <div class="ui-grid-a paddingLeft10">
+                <a href="#brownies"><img  class="menu-image" src="brownies.jpg" /></a>
+				<a href="#dutch-pancake"><img class="menu-image" src="dutch-pancake.jpg" /></a>
+				<a href="#lavacake"><img class="menu-image" src="lavacake.jpg" /></a>
+        </div>
+        </div>
+    </section>
+    <!-- This is the page2 page -->
+    <div id="page2" data-role="page">
+        <div data-role="header"><a href="#page1" class="ui-btn-left"> Back</a>
+            <h1>FEEDBACK</h1>
+        </div>
+          <div class="ui-content Banner" role="main">
+            <p class="header_font">Bellas Pizza</p >          
+            
+            <div data-role="controlgroup" data-type="horizontal">
+			     <!-- Menu Items -->
+                <a href="#firstpage" class="ui-btn">Home</a>
+               <a href="#page1" class="ui-btn">Menu</a>
+               <a href="#page2" class="ui-btn">Feedback</a>
+               <a href="#page3" class="ui-btn">Gallery</a>
+               <a href="#page4" class="ui-btn">About</a>
+               <a href="#page5" class="ui-btn">Contact</a>
+               <a href="#page6" class="ui-btn">Developer</a>
+                <a href="#page7" class="ui-btn">Booking</a>
+                  <a href="Map.html" rel="external" class="ui-btn">location</a>
+            </div>
+        </div>
+		 <!-- Form tag to display as a form -->
+        <form method="get" action="" class="form-class">
+          <fieldset class="ui-field-contain">
+            <label for="Name">Name:</label>
+            <input type="text" name="Name" id="Name" value="" placeholder="Name"/>
+            <br> <br> <br>
+            <label for="Email">Email:</label>
+            <input type="text" name="Email" id="Email" value="" placeholder="Your Email"/>
+            <br> <br> <br>
+            <label for="Address">Your Address:</label>
+            <input type="text" name="Address" id="Address" value="" placeholder="Your Address"/>
+            
+          </fieldset>
+            <div class="ui-field-contain">
+            <label for="details">feedback</label>
+          	<textarea id="details"></textarea>
+          </div>
+          <a href="#" class="ui-btn btn">Submit</a>
+        </form>
+        
+    </div>
+    
+    <!-- This is the page3 page -->
+    <div id="page3" data-role="page">
+        <div data-role="header">
+		 <!-- Heading tag -->
+            <h1>GALLERY</h1>
+        </div>
+		  <div class="ui-content Banner" role="main">
+            <p class="header_font">Bellas Pizza</p >          
+            
+            <div data-role="controlgroup" data-type="horizontal">
+			     <!-- Menu Items -->
+                <a href="#firstpage" class="ui-btn">Home</a>
+               <a href="#page1" class="ui-btn">Menu</a>
+               <a href="#page2" class="ui-btn">Feedback</a>
+               <a href="#page3" class="ui-btn">Gallery</a>
+               <a href="#page4" class="ui-btn">About</a>
+               <a href="#page5" class="ui-btn">Contact</a>
+               <a href="#page6" class="ui-btn">Developer</a>
+                <a href="#page7" class="ui-btn">Booking</a>
+                  <a href="Map.html" rel="external" class="ui-btn">location</a>
+            </div>
+        </div>
+        <div class="ui-content" role="main">      
+        </div>
+        <div class="photos ui-content">		
+		<ul>
+		<li>
+		 <!-- img tag used to display and image -->
+		<a href="#"><img src="img_01.jpg" /></a>
+		</li>
+		<li>
+		<a href="#"><img src="img_02.jpg" /></a>
+		</li>
+		<li>
+		<a href="#"><img src="img_03.jpg" /></a>
+		</li>
+		<li>
+		<a href="#"><img src="img_04.jpg" /></a>
+		</li>
+		<li>
+		<a href="#"><img src="img_05.jpg" /></a>
+		</li>
+		<li>
+		<a href="#"><img src="img_06.jpg" /></a>
+		</li>
+		<li>
+		<a href="#"><img src="img_07.jpg" /></a>
+		</li>
+		<li>
+		<a href="#"><img src="img_08.jpg" /></a>
+		</li>
+		<li>
+		<a href="#"><img src="img_09.jpg" /></a>
+		</li>
+		<li>
+		<a href="#"><img src="img_10.jpg" /></a>
+		</li>
+		<li>
+		<a href="#"><img src="img_11.jpg" /></a>
+		</li>
+		<li>
+		<a href="#"><img src="img_12.jpg" /></a>
+		</li>
+		<li>
+		<a href="#"><img src="img_13.jpg" /></a>
+		</li>
+		</ul>
+		</div>       
+      
+    </div>
+    
+    <!-- This is the page4 page -->
+    <div id="page4" data-role="page">
+        <div data-role="header">
+            <h1>ABOUT</h1>
+        </div>
+		  <div class="ui-content Banner" role="main">
+            <p class="header_font">Bellas Pizza</p >          
+            
+            <div data-role="controlgroup" data-type="horizontal">
+			     <!-- Menu Items -->
+                <a href="#firstpage" class="ui-btn">Home</a>
+               <a href="#page1" class="ui-btn">Menu</a>
+               <a href="#page2" class="ui-btn">Feedback</a>
+               <a href="#page3" class="ui-btn">Gallery</a>
+               <a href="#page4" class="ui-btn">About</a>
+               <a href="#page5" class="ui-btn">Contact</a>
+               <a href="#page6" class="ui-btn">Developer</a>
+                <a href="#page7" class="ui-btn">Booking</a>
+                  <a href="Map.html" rel="external" class="ui-btn">location</a>
+            </div>
+        </div>
+        <div class="ui-content" role="main">
+    
+        </div>
+        <p class="alignPara">At Bellas Pizza Thornlie, we understand the importance of value for our customers <br>that’s why unlike some of our competitors we haven’t reduced the size of our large pizza.<br>Not only are our pizzas BIGGER, but they’re also FRESHER with MORE TOPPINGS. <br>Conveniently located at Spencer Village, Pappa’s Pizza can deliver piping hot delicious pizza straight to your door, or simply order and pick-up.
+           Have you tasted a Bellas Pizza? <br>Try one today!</p>
+        
+    </div>
+ 
+    <!-- This is the page5 page -->
+    <div id="page5" data-role="page">
+        <div data-role="header">
+            <h1>CONTACT</h1>
+        </div>
+		  <div class="ui-content Banner" role="main">
+            <p class="header_font">Bellas Pizza</p >          
+            
+            <div data-role="controlgroup" data-type="horizontal">
+			     <!-- Menu Items -->
+                <a href="#firstpage" class="ui-btn">Home</a>
+               <a href="#page1" class="ui-btn">Menu</a>
+               <a href="#page2" class="ui-btn">Feedback</a>
+               <a href="#page3" class="ui-btn">Gallery</a>
+               <a href="#page4" class="ui-btn">About</a>
+               <a href="#page5" class="ui-btn">Contact</a>
+               <a href="#page6" class="ui-btn">Developer</a>
+                <a href="#page7" class="ui-btn">Booking</a>
+                  <a href="Map.html" rel="external" class="ui-btn">location</a>
+            </div>
+        </div>
+       
+       
+        <h4 class="padding5">Address: Spencer Village,
+		<br>
+		18/200 Spencer Rd,
+		<br>
+		Thornlie WA 6108
+		</h4> 
+        <h4 class="padding5">Phone:(08) 9451 6936 <a href="skype:skype_user?call"> Call Us!</a></h4> 
+        <h4 class="padding5">Hours: Open today · 2:30 – 10:00 pm</h4> 
+       
+    </div>
+
+	
+	
+    <!-- This is the page6 page -->
+    <div id="page6" data-role="page">
+        <div data-role="header">
+            <h1>DEVELOPER</h1>
+        </div>
+          <div class="ui-content Banner" role="main">
+            <p class="header_font">Bellas Pizza</p >          
+            
+            <div data-role="controlgroup" data-type="horizontal">
+			     <!-- Menu Items -->
+                <a href="#firstpage" class="ui-btn">Home</a>
+               <a href="#page1" class="ui-btn">Menu</a>
+               <a href="#page2" class="ui-btn">Feedback</a>
+               <a href="#page3" class="ui-btn">Gallery</a>
+               <a href="#page4" class="ui-btn">About</a>
+               <a href="#page5" class="ui-btn">Contact</a>
+               <a href="#page6" class="ui-btn">Developer</a>
+                <a href="#page7" class="ui-btn">Booking</a>
+                 <a href="Map.html" rel="external" class="ui-btn">location</a>
+            </div>
+       
+		</div>
+		
+        <h4 class="padding5">Developer Name: Charith Nipuna Kalansooriya</h4>
+		
+		<h4 class="padding5">University Name: Deakin</h4>
+		
+		<h4 class="padding5">ID Number: 213208713</h4>       			
+        
+    </div>
+    
+     <!-- This is the page7 page -->
+   <div id="page7" data-role="page">
+        <div data-role="header">
+            <h1>Booking</h1>
+        </div>
+          <div class="ui-content Banner" role="main">
+            <p class="header_font">Bellas Pizza</p >          
+            
+            <div data-role="controlgroup" data-type="horizontal">
+			     <!-- Menu Items -->
+                <a href="#firstpage" class="ui-btn">Home</a>
+               <a href="#page1" class="ui-btn">Menu</a>
+               <a href="#page2" class="ui-btn">Feedback</a>
+               <a href="#page3" class="ui-btn">Gallery</a>
+               <a href="#page4" class="ui-btn">About</a>
+               <a href="#page5" class="ui-btn">Contact</a>
+               <a href="#page6" class="ui-btn">Developer</a>
+               <a href="#page7" class="ui-btn">Booking</a>
+                  <a href="Map.html" rel="external" class="ui-btn">location</a>
+            </div>
+        </div>
+		 <!-- Form tag to display as a form -->
+        <form method="get" action="" class="form-class">
+          <fieldset class="ui-field-contain">
+            <label for="Booking Name">Name:</label>
+            <input type="text" name="Booking Name" id="Booking Name" value="" placeholder="Booking Name"/>
+            <br> <br> <br>
+            <label for=" Booking Email">Email:</label>
+            <input type="text" name="Booking Email" id="Booking Email" value="" placeholder="Your Booking Email"/>
+            <br> <br> <br>
+            <label for="Booking Address">Your Address:</label>
+            <input type="text" name="Booking Address" id="Booking Address" value="" placeholder="Your Booking Address"/>
+            
+                   <!--selectgroup for year-->
+			<label for="year">Select Year</label>
+            <select name="year" id="year">
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+            </select>
+    		<br><!--selectgroup  for month-->
+            <label for="month">Select Month</label>
+            <select name="month" id="month">
+              <option value="Jan">January</option>
+              <option value="Feb">February</option>
+              <option value="Mar">March</option>
+              <option value="Apr">April</option>
+              <option value="May">May</option>
+              <option value="Jun">June</option>
+              <option value="Jul">July</option>
+              <option value="Aug">August</option>
+              <option value="Sep">September</option>
+              <option value="Oct">October</option>
+              <option value="Nov">November</option>
+              <option value="Dec">December</option>
+            </select>
+    
+           <br><!--selectgroup for date -->
+             <label for="date">Select date</label>
+            <select name="date" id="date">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <br>
+            </select>
+            
+            </fieldset> <!--fieldset for booking details -->
+            <div class="ui-field-contain" >
+            <label for="details">booking details</label>
+          	<textarea id="detailsd"></textarea>
+          	<a href="#" class="ui-btn ui-field-contain" >Submit</a>
+          </div>
+          
+        </form>
+              
+          </div>
+ 
+ <!-- This is the a test dialog page hamcheese-pizza  -->
+    <div id="hamcheese-pizza" data-role="page" data-dialog="true">
+        <div data-role="header">
+            <h1>Ham & Cheese Pizza</h1>
+        </div>
+        <div>
+        <img class="popup-image" src="hamcheese-pizza.jpg" />
+                </div>
+				<h3><b>Ingredients</b></h3>
+
+<p>4 small wholemeal pita breads 4 tablespoons no-added-salt tomato paste 2 small zucchinis, trimmed, very thinly sliced lengthwise 100g shaved 97% fat-free ham, thinly sliced 2 large tomatoes, diced 1 cup low-fat shredded cheese ground black pepper, to taste baby rocket leaves, to serve</p>
+        <p><b>Insturctions</b></p>
+
+<p>Spread each pita with 1 tablespoon of tomato paste, then top with a quarter of the zucchini, ham, tomato and cheese. Season with pepper. Place pizzas on preheated trays and bake for 10 minutes, until base is crisp. To serve, cut into quarters and top with rocket</p>
+        
+    </div>
+	<!-- This is the a test dialog page Italiano  -->
+    <div id="italiano" data-role="page" data-dialog="true">
+        <div data-role="header">
+            <h1>Italiano</h1>
+        </div>
+        <div>
+        <img class="popup-image" src="italiano.jpg" />
+                </div>
+      	<h3><b>Ingredients</b></h3>
+
+
+        <p><b>Insturctions</b></p>
+
+<p>Divide the dough into 2 equal portions. Place 1 portion on a lightly floured surface and cover with a clean, damp tea towel. Roll other portion out on a lightly floured surface to form a 2mm-thick rectangle. Transfer to 1 of the prepared baking trays. Prick all over with a fork and spread with 1/2 the pizza sauce. Repeat with the remaining dough and pizza sauce. Cover with non-stick baking paper and leave in a warm place for 10 minutes or until pizzas rise slightly. Bake in preheated oven for 6 minutes, swap the trays around and then bake for a further 6 minutes. Remove from the oven and top with the tomatoes, prosciutto and bocconcini. Bake for a further 2 minutes or until the bocconcini just melts. Sprinkle with the basil, drizzle with oil and season with salt and pepper. Use an egg slide to slide onto a board, cut into portions and serve immediately.</p>
+   
+        
+    </div>
+	<!-- This is the a test dialog page periperi-chiken  -->
+    <div id="periperi-chiken" data-role="page" data-dialog="true">
+        <div data-role="header">
+            <h1>periperi-chiken</h1>
+        </div>
+        <div>
+        <img class="popup-image" src="periperi-chiken.jpg"/>
+                </div>
+       <h3><b>Ingredients</b></h3>
+
+<p>2 red capsicums, 70g (1/4 cup) no-fat Greek yoghurt, 2 garlic cloves, 1 long red chilli, chopped 1 teaspoon sweet paprika 1 teaspoon dried oregano leaves 1 tablespoon lemon juice 2 teaspoons extra virgin olive oil 400g chicken tenderloins 1 large red onion, cut into thin wedges 2 pizza bases 80g (1 cup) coarsely grated Mainland Noble White reduced-fat cheddar 1 Lebanese cucumber, seeded, finely chopped</p>
+        <p><b>Insturctions</b></p>
+
+<p>Preheat barbecue with hood on medium. Spray capsicums with oil. Cook, turning, for 15-20 minutes or until charred. Place in a bowl and cover with plastic wrap. Stand for 5 minutes. Peel and deseed. Thickly slice 1 1/2 capsicums. Process other half in a food processor until smooth. Place in a bowl and stir in yoghurt. Season Meanwhile, process garlic, chilli, paprika and oregano until coarsely chopped. Add lemon juice and oil. Process until combined. Season. Transfer to a bowl and add chicken. Marinate for 10 minutes. Chargrill, turning, for 4-5 minutes or until cooked through. Slice and keep warm. Spray onion with oil. Chargrill, turning, for 2-3 minutes until tender. Place pizza bases on 2 baking trays. Sprinkle with cheese. Top with capsicum and onion. Barbecue, with hood closed, for 12-14 minutes or until base is crisp and cheese melts. Top the pizzas with chicken, cucumber and coriander. Drizzle with capsicum yoghurt.</p>
+   
+        
+    </div>
+	<!-- This is the a test dialog page supreme  -->
+    <div id="supreme" data-role="page" data-dialog="true">
+        <div data-role="header">
+            <h1>Supreme</h1>
+        </div>
+        <div>
+        <img class="popup-image" src="supreme.jpg"/>
+                </div>
+       <h3><b>Ingredients</b></h3>
+
+<p>2 bacon rashers, coarsely chopped2 large (40cm) bought pizza 1/2 cup (125ml) barbecue sauce 2 cups (160g) coarsely grated pizza cheese 2 cups coarsely shredded roast chicken 1 red capsicum, seeded, thinly sliced 1 red onion, thinly sliced 100g button mushrooms, thinly sliced Baby rocket leaves, to serve</p>
+        <p><b>Insturctions</b></p>
+
+<p>Preheat oven to 220°C. Heat a medium non-stick frying pan over medium-high heat. Add the bacon and cook, stirring, for 2-3 minutes or until golden brown. Remove from heat. Place the pizza bases on oven trays. Spread the barbecue sauce over the base of each pizza. Sprinkle with half the pizza cheese. Arrange the chicken, capsicum, onion, mushrooms and bacon over the pizzas. Sprinkle with remaining cheese. Bake in preheated oven, swapping trays halfway through cooking, for 10-15 minutes or until bases are crisp and lightly brown. Remove from oven. Cut into wedges and serve immediately.</p>
+   
+        
+    </div>
+	
+  <!-- This is the a test dialog page coca cola  -->
+    <div id="cocacola" data-role="page" data-dialog="true">
+        <div data-role="header">
+            <h1>Coca-cola</h1>
+        </div>
+        <div>
+        <img class="popup-image" src="cocacola.jpg" />
+                </div>
+        <p> Coca-Cola :1.25l,600ml,350ml<br>Cola-Cola Zero :1.25l,600ml,350ml<br>Cola-Cola Diet:1.25ml,600ml,350ml</p>
+        
+    </div>
+    
+    <!-- This is the a test dialog page fanta  -->
+    <div id="Fanta" data-role="page" data-dialog="true">
+        <div data-role="header">
+            <h1>Fanta</h1>
+        </div>
+        <div>
+        
+        <img class="popup-image" src="Fanta.jpg"/>
+        </div>
+        <br>
+        <p> fanta :1.25l,600ml,350ml<br>fantaZero :1.25l,600ml,350ml</p>
+        </div>
+        
+        <!-- This is the a test dialog page water  -->
+    <div id="mountfranklin" data-role="page" data-dialog="true">
+        <div data-role="header">
+            <h1>mountfranklin</h1>
+        </div>
+        <div>
+        
+        <img class="popup-image" src="mountfranklin.jpg"/>
+        </div>
+        <br>
+        <p> mountfranklin :1.25l,600ml,350ml<br>fantaZero :1.25l,600ml,350ml</p>
+        
+    </div>
+    <!-- This is the a test dialog page chips  -->
+    <div id="chips" data-role="page" data-dialog="true">
+        <div data-role="header">
+            <h1>Chips</h1>
+        </div>
+        <div>
+        <img class="popup-image" src="chips.jpg" />
+                </div> 
+       <p>1kg Sebago potatoes 1.5 to 2 litres vegetable oil, for deep-frying</p>
+        <p><b>Insturctions</b></p>
+
+<p>Peel potatoes. Cut into long chips about 1.5cm thick. Use a clean tea towel or large piece of paper towel to pat potatoes dry.  vegetable oil into a large saucepan, wok or deep-fryer until it is half-full. Heat over medium-high heat until a small piece of potato skin sizzles when dropped into oil. Place a wire rack over a large oven tray lined with paper towels. Divide chips into 3 batches. Cook chips, 1 batch at a time, for 5 minutes or until they just start to colour. Use a slotted spoon to remove to rack. Repeat with remaining 2 batches, allowing oil to reheat in between batches. Preheat oven to 180°. When all chips have been cooked, allow them to cool for 10 minutes. Reheat oil. Cook chips in batches again, for 7 to 10 minutes each batch or until crisp and golden. Keep warm on rack in oven while cooking remaining chips. Season with salt. Serve immediately.</p>
+   
+        
+    </div>
+	 <!-- This is the a test dialog page Garlicbread  -->
+    <div id="Garlicbread" data-role="page" data-dialog="true">
+        <div data-role="header">
+            <h1>Garlic Bread</h1>
+        </div>
+        <div>
+        <img class="popup-image" src="Garlicbread.jpg"/>
+                </div>
+         <h3><b>Ingredients</b></h3>
+
+<p>2 x 35cm baguettes 150g butter, softened 4 garlic cloves, crushed 2 tablespoons fresh flat-leaf parsley leaves, finely chopped 1 tablespoon finely chopped fresh chives</p>
+        <p><b>Insturctions</b></p>
+
+<p>Preheat oven to 220°C/200°C fan-forced. Cut bread into 2.5cm-thick slices (don’t cut all the way through). Combine butter, garlic, parsley and chives in a bowl. Season with salt and pepper. Spread over cut sides of bread. Wrap each baguette in foil. Bake for 12 to 15 minutes or until butter is melted and bread crisp. Serve</p>
+   
+        
+    </div>	 
+		 <!-- This is the a test dialog page spicy-chicken-bites  -->
+    <div id="spicy-chicken-bites" data-role="page" data-dialog="true">
+        <div data-role="header">
+            <h1>Spicy Chicken Bites</h1>
+        </div>
+        <div>
+        <img class="popup-image" src="spicy-chicken-bites.jpg"/>
+                </div>
+       <h3><b>Ingredients</b></h3>
+
+<p>2 (500g) chicken breast fillets, cubed 1 teaspoon five spice powder 2 garlic cloves, crushed 1 teaspoon sesame oil 1/4 cup honey 1/4 cup soy sauce thinly sliced green onion, to serve</p>
+        <p><b>Insturctions</b></p>
+
+<p>Place chicken in a shallow glass or ceramic bowl. Add five spice, garlic, sesame oil, honey and soy sauce. Toss to combine. Cover. Refrigerate for 30 minutes. Heat a chargrill pan over medium-high heat. Place 1 sheet baking paper on chargrill to avoid chicken burning. Cook chicken, in 2 batches, for 5 to 6 minutes or until browned and cooked through. Top with onion. Serve.</p>
+   
+        
+    </div>
+	
+	<!-- This is the a test dialog page lavacake-->
+    <div id="lavacake" data-role="page" data-dialog="true">
+        <div data-role="header">
+            <h1>Lavacake</h1>
+        </div>
+        <div>
+        <img class="popup-image" src="lavacake.jpg"/>
+                </div>
+      <h3><b>Ingredients</b></h3>
+
+<p>3 tablespoons butter,3 eggs,3/4 cup all-purpose flour,3/4 cup milk, heated 20 to 30 seconds in the microwave,1 tablespoon plus 1 teaspoon sugar,2 teaspoons vanilla extract,Pinch of salt, 1 pint fresh or frozen blueberries, 1 teaspoon sugar 1/2 teaspoon fresh lemon zest ,2 tablespoons confectioners' sugar</p>
+        <p><b>Insturctions</b></p>
+
+<p>Preheat the oven to 400 degrees F. Place the butter in a large saute pan and place in the oven to melt. Meanwhile, in a blender, combine the eggs, flour, hot milk, 1 tablespoon sugar, vanilla extract, and pinch of salt, and blend on medium-high speed until uniform. Cook's Note: If mixing by hand, combine the eggs with the milk until the mixture is light yellow and no longer stringy, about 1 minute. Add the flour, sugar, vanilla, and pinch of salt, and whisk vigorously to remove the lumps, about 30 seconds. Carefully, remove the hot pan from the oven. The butter should be melted. Swirl the butter around the pan to coat completely, and then pour the remaining butter into the batter and whisk to blend. Pour the batter into the hot pan and return the pan to the oven. Cook the pancake for 20 to 25 minutes, or until the pancake is puffed in the center, and golden brown along the edges. While the Dutch baby bakes, in a small bowl combine the fresh blueberries, 1 teaspoon sugar, and lemon zest. Stir to coat, and set aside to marinate. Using a spatula, remove the entire Dutch baby from the pan and place on a cooling rack for a few minutes to allow the steam to escape without condensing along the bottom and rendering the pancake soggy. Slice the pancake into wedges on a serving platter or cutting board and prinkle with the confectioners' sugar through a sieve. Serve with the marinated blueberries</p>
+  
+        
+    </div>
+		 <!-- This is the a test dialog page brownies-->
+    <div id="brownies" data-role="page" data-dialog="true">
+        <div data-role="header">
+            <h1>Brownies</h1>
+        </div>
+        <div>
+        <img class="popup-image" src="brownies.jpg"/>
+                </div>
+       <h3><b>Ingredients</b></h3>
+
+<p>1/2 cup vegetable oil, 1 cup sugar,1 teaspoon vanilla,2 large eggs,1/4 teaspoon baking powder,1/3 cup cocoa powder,1/4 teaspoon salt,1/2 cup flour</p>
+        <p><b>Insturctions</b></p>
+
+<p>Preheat oven to 350°. Mix oil and sugar until well blended. Add eggs and vanilla; stir just until blended. Mix all dry ingredients in a separate bowl. Stir dry ingredients into the oil/sugar mixture. Pour into greased 9 x 9 square pan. Bake for 20 minutes or until sides just start to pull away from the pan. Cool completely before cutting. Note: I usually double the recipe and bake in a 9 x 13 pan. If you double the recipe, you will need to cook longer than 20 minutes</p>
+  
+        
+    </div>
+	 <!-- This is the a test dialog page dutch-pancake-->
+    <div id="dutch-pancake" data-role="page" data-dialog="true">
+        <div data-role="header">
+            <h1>Dutch Pancake</h1>
+        </div>
+        <div>
+        <img class="popup-image" src="dutch-pancake.jpg"/>
+                </div>
+          <h3><b>Ingredients</b></h3>
+
+<p>3 tablespoons butter,3 eggs,3/4 cup all-purpose flour,3/4 cup milk, heated 20 to 30 seconds in the microwave,1 tablespoon plus 1 teaspoon sugar,2 teaspoons vanilla extract,Pinch of salt, 1 pint fresh or frozen blueberries, 1 teaspoon sugar 1/2 teaspoon fresh lemon zest ,2 tablespoons confectioners' sugar</p>
+        <p><b>Insturctions</b></p>
+
+<p>Preheat the oven to 400 degrees F. Place the butter in a large saute pan and place in the oven to melt. Meanwhile, in a blender, combine the eggs, flour, hot milk, 1 tablespoon sugar, vanilla extract, and pinch of salt, and blend on medium-high speed until uniform. Cook's Note: If mixing by hand, combine the eggs with the milk until the mixture is light yellow and no longer stringy, about 1 minute. Add the flour, sugar, vanilla, and pinch of salt, and whisk vigorously to remove the lumps, about 30 seconds. Carefully, remove the hot pan from the oven. The butter should be melted. Swirl the butter around the pan to coat completely, and then pour the remaining butter into the batter and whisk to blend. Pour the batter into the hot pan and return the pan to the oven. Cook the pancake for 20 to 25 minutes, or until the pancake is puffed in the center, and golden brown along the edges. While the Dutch baby bakes, in a small bowl combine the fresh blueberries, 1 teaspoon sugar, and lemon zest. Stir to coat, and set aside to marinate. Using a spatula, remove the entire Dutch baby from the pan and place on a cooling rack for a few minutes to allow the steam to escape without condensing along the bottom and rendering the pancake soggy. Slice the pancake into wedges on a serving platter or cutting board and prinkle with the confectioners' sugar through a sieve. Serve with the marinated blueberries</p>
+  
+        
+    </div>
+    
+</body>
+</html>
